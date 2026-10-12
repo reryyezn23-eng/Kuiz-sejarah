@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#180c2b"><meta name="description" content="Quiz time bersama Mythia Batford — kuis sejarah dengan sentuhan ungu, glam, dan racing.">
+  <title>Mythia Batford — Quiz Club</title><link rel="stylesheet" href="style.css">
+</head>
+<body id="app-body">
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="site-shell">
+    <header class="topbar"><a class="brand" href="#top" aria-label="Mythia Batford home"><span class="brand-mark">✦</span><span>MYTHIA <b>BATFORD</b><small>QUIZ CLUB · EST. 2026</small></span></a><div class="top-tag"><span class="live-dot"></span> YOUR MAIN CHARACTER ERA</div></header>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✧</span> WELCOME TO MY LITTLE QUIZ UNIVERSE</div>
+        <h1>Think sharp.<br><em>Shine brighter.</em></h1>
+        <p class="hero-description">Satu kuis, sepuluh tantangan, dan sedikit energi vampir ungu. Siap tunjukkan seberapa jago kamu?</p>
+        <div class="hero-stats"><div><strong>10</strong><span>PERTANYAAN</span></div><i></i><div><strong>100</strong><span>SKOR MAKS.</span></div><i></i><div><strong>∞</strong><span>GOOD VIBES</span></div></div>
+        <div class="hero-actions"><button class="btn btn-primary" onclick="applySettings()">Mulai petualangan <span>↗</span></button><a class="text-link" href="#how-to-play">Lihat cara main <span>↓</span></a></div>
+        <div class="signature"><span class="signature-line"></span><span>curated with a little chaos</span> <b>♡</b></div>
+      </div>
+      <div class="hero-art" aria-label="Galeri Mythia Batford">
+        <div class="photo photo-main"><img src="assets/mythia-beach.jpg" alt="Mythia Batford di pantai"><span class="photo-label">SUNSHINE MODE ☀</span></div>
+        <div class="photo photo-top"><img src="assets/mythia-racing.jpg" alt="Mythia Batford dengan outfit racing"><span class="photo-label">RACE DAY</span></div>
+        <div class="photo photo-bottom"><img src="assets/mythia-lounge.jpg" alt="Mythia Batford bersantai"><span class="photo-label">VIOLET HOURS</span></div>
+        <div class="orbit-sticker">BAT<br><b>♡</b><br>MODE</div><div class="sparkle sparkle-a">✦</div><div class="sparkle sparkle-b">✧</div>
+      </div>
+    </section>
+    <section class="gallery-strip" aria-label="Mythia moodboard"><div class="gallery-image"><img src="assets/mythia-collage.png" alt="Moodboard Mythia Batford dan mobil ungu"><span>THE VIBE</span></div><div class="gallery-quote"><span class="quote-mark">“</span><p>Pretty brain.<br><em>Powerful energy.</em></p><small>MYTHIA BATFORD · QUIZ CLUB</small></div><div class="gallery-image gallery-race"><img src="assets/mythia-racing.jpg" alt="Mythia dengan seragam balap"><span>FULL THROTTLE</span></div></section>
+    <section class="quiz-area" id="quiz-area">
+      <div class="section-heading"><div><div class="eyebrow">THE CHALLENGE</div><h2>Ready, quiz bestie?</h2></div><div class="section-note">01 — LEARN<br>02 — PLAY<br>03 — SLAY</div></div>
+      <div class="quiz-card glass-panel">
+        <div class="card-topline"><span class="mini-star">✦</span><span>MYTHIA'S KNOWLEDGE CHECK</span><span class="card-topline-right">HISTORY EDITION</span></div>
+        <div id="screen-setup" class="screen screen-setup">
+          <div class="setup-art"><img src="assets/mythia-collage.png" alt="Mythia Batford moodboard"><div class="setup-sticker">LET'S<br>GO! <span>↗</span></div></div>
+          <div class="setup-content"><div class="pill">✧ YOUR NEXT SIDE QUEST</div><h3>Sejarah, but<br><em>make it iconic.</em></h3><p>Uji ingatanmu tentang penjelajahan samudra, rempah-rempah, dan VOC. Sepuluh soal pilihan ganda menantimu!</p>
+            <label for="topic-select">PILIH TOPIK</label><select id="topic-select"><option value="sejarah_uts">Penjelajahan Samudra & VOC</option></select>
+            <label for="bg-url">BACKGROUND KUSTOM <span>(OPSIONAL)</span></label><input type="text" id="bg-url" placeholder="Tempel URL gambar kalau mau…">
+            <button class="btn btn-primary btn-wide" onclick="applySettings()">Lanjut ke briefing <span>↗</span></button><div class="tiny-note">NO PRESSURE · JUST DO YOUR BEST ♡</div>
+          </div>
+        </div>
+        <div id="screen-learning" class="hidden screen-learning">
+          <div class="learning-intro"><div class="pill">✧ QUICK BRIEFING</div><h3>Recap dulu, <em>bestie.</em></h3><p>Refresh ingatanmu sebelum masuk ke arena kuis.</p></div>
+          <div class="material-grid"><article><span>01</span><h4>Konstantinopel · 1453</h4><p>Jatuh ke tangan Turki Utsmani, akses darat Eropa ke Asia terganggu dan rempah makin langka.</p></article><article><span>02</span><h4>Motif 3G</h4><p><b>Gold</b> = kekayaan, <b>Glory</b> = kejayaan, <b>Gospel</b> = penyebaran agama.</p></article><article><span>03</span><h4>Vasco da Gama · 1498</h4><p>Mencapai Calicut, India melalui jalur laut melewati Tanjung Harapan.</p></article><article><span>04</span><h4>VOC · 1602–1799</h4><p>Kongsi dagang Belanda untuk monopoli rempah, runtuh karena korupsi dan biaya perang.</p></article><article class="material-wide"><span>05</span><h4>Dampak kolonialisme</h4><p>Infrastruktur dan tanaman ekspor berkembang, tetapi rakyat juga mengalami kerja paksa, eksploitasi, dan kemiskinan.</p></article></div>
+          <button class="btn btn-primary btn-wide" onclick="startQuiz()">I'm ready — mulai kuis! <span>↗</span></button>
+        </div>
+        <div id="screen-quiz" class="hidden screen-quiz">
+          <aside class="quiz-sidebar"><div class="sidebar-label">YOUR PROGRESS</div><div class="progress-ring"><span id="progress-percent">0%</span></div><div class="progress-copy"><strong id="answered-count">0 / 10</strong><span>soal terjawab</span></div><div id="question-nav" class="question-nav"></div><div class="nav-legend"><span><i class="legend-done"></i> Terjawab</span><span><i></i> Belum</span></div><div class="sidebar-motto">YOU'VE GOT THIS <b>♡</b></div></aside>
+          <div class="question-panel"><div class="question-meta"><span id="q-counter">SOAL 1 DARI 10</span><span class="difficulty">✦ HISTORY MODE</span></div><div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div><h3 id="q-text">Pertanyaan...</h3><div id="q-options" class="q-options"></div><div class="question-footer"><button onclick="prevQuestion()" id="btn-prev" class="btn btn-ghost">← Kembali</button><button onclick="nextQuestion()" id="btn-next" class="btn btn-primary">Selanjutnya ↗</button><button onclick="finishQuiz()" id="btn-finish" class="hidden btn btn-primary">Kumpulkan jawaban ✦</button></div></div>
+        </div>
+        <div id="screen-results" class="hidden screen-results"><div class="result-hero"><div class="result-confetti">✦　✧　♡　✦</div><div class="pill">QUIZ COMPLETED</div><h3>That's a <em>wrap!</em></h3><div class="result-score"><span id="final-score">0</span><small>/100</small></div><p id="score-msg"></p><button onclick="resetQuiz()" class="btn btn-primary">Main lagi yuk ↻</button></div><div class="review-heading"><h4>Review jawaban <span>✧</span></h4><p>Belajar dari tiap jawaban, lalu comeback lebih kuat.</p></div><div id="review-container" class="review-container"></div></div>
+        <div class="card-footer"><span>✦ MYTHIA BATFORD QUIZ CLUB</span><span>MADE OF MOONLIGHT & MISCHIEF ♡</span></div>
+      </div>
+    </section>
+    <section class="how-section" id="how-to-play"><div class="eyebrow">THE PLAYBOOK</div><h2>Easy as <em>1, 2, 3.</em></h2><div class="steps"><article><span>01</span><h3>Refresh</h3><p>Baca briefing singkat supaya materi makin nempel.</p></article><article><span>02</span><h3>Choose wisely</h3><p>Pilih jawaban terbaik dan pantau progress-mu.</p></article><article><span>03</span><h3>Own your score</h3><p>Lihat hasil, baca pembahasan, dan coba lagi!</p></article></div></section>
+    <footer class="site-footer"><div class="brand-mark">✦</div><p>Stay curious. Stay iconic.</p><small>MYTHIA BATFORD QUIZ CLUB © 2026</small></footer>
+  </main>
+  <script src="app.js"></script>
+</body></html>
